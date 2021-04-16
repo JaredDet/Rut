@@ -21,7 +21,7 @@ public class Rut {
 
     public static boolean validarRut(String rut) {
 
-        Pattern pat = Pattern.compile("^[0-9]{1,2}\\.{0,1}[0-9]{3}\\.{0,1}[0-9]{3}[-]{0,1}[0-9-kK]$");
+        Pattern pat = Pattern.compile("^[1-9]{1,2}\\.{0,1}[0-9]{3}\\.{0,1}[0-9]{3}[-]{0,1}[0-9-kK]$");
         Matcher mat = pat.matcher(rut);
         return mat.find();
     }
