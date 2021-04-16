@@ -10,11 +10,9 @@ public class Rut {
 
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Ingrese entrada");
+        System.out.println("Ingrese su rut");
 
-        String entrada = teclado.nextLine();
-
-        return entrada;
+        return teclado.nextLine();
     }
 
     //Metodo que valida que dicho rut esté bien escrito
@@ -53,6 +51,7 @@ public class Rut {
         if(rut.charAt(rut.length()-1) == 'k' && verificador == 10){
 
             return true;
+            
         }else if (rut.charAt(rut.length()-1) == '0' && verificador == 11){
 
             return true;
