@@ -24,7 +24,7 @@ public class Rut {
 
     public static boolean validarRut(String rut) {
 
-        return rut.matches(("^[1-9][0-9]\\.{0,1}[0-9]{3}\\.{0,1}[0-9]{3}[-]{0,1}[0-9-kK]$"));
+        return rut.matches(("^[1-9][0-9]\\.?[0-9]{3}\\.?[0-9]{3}[-]?[0-9kK]$"));
     }
 
     //Metodo que valida el verificador rut
@@ -54,6 +54,7 @@ public class Rut {
         if (rut.charAt(rut.length() - 1) == 'k' && verificador == 10) {
 
             return true;
+
         } else if (rut.charAt(rut.length() - 1) == '0' && verificador == 11) {
 
             return true;
@@ -72,7 +73,7 @@ public class Rut {
         if (!(validarRut(rut))) {
 
             invalidarRut();
-            crearRut();
+            rut = crearRut();
         }
 
         rut = rut.replace(".", "");
@@ -81,10 +82,10 @@ public class Rut {
         if (!(validarVerificador(rut.toLowerCase()))) {
 
             invalidarRut();
-            crearRut();
+            rut = crearRut();
         }
 
-        return "rut válido";
+        return rut;
     }
 
     //metodo que muestra rut no valido
