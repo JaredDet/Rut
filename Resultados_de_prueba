@@ -1,0 +1,68 @@
+/* Se realizaron 5 pruebas por cada método y estos fueron los resultados
+
+    void validarRut() {
+
+        boolean s = rut.validarRut("20.048.080-K");
+        boolean rut = true;
+        assertEquals(rut, s);
+    }
+
+El rut fue tomado como válido.
+
+    void validarVerificador() {
+
+        boolean s = rut.validarVerificador("20048080k");
+        boolean rut = false;
+    }
+
+Como se esperaba, al tener el dígito verificador malo, retorno false.
+
+    void validarRut() {
+
+        boolean s = rut.validarRut(" ");
+        boolean rut = false;
+        assertEquals(rut, s);
+    }
+
+Al no cumplir con la expresión solicitada, retornó false tal y como se esperaba.
+
+    void validarRut() {
+
+        boolean s = rut.validarRut("2-7");
+        boolean rut = false;
+        assertEquals(rut, s);
+    }
+
+Al no cumplir con la expresión solicitada, retornó false tal y como se esperaba.
+
+    void validarRut() {
+
+        boolean s = rut.validarRut("0000000-0");
+        boolean rut = false;
+        assertEquals(rut, s);
+    }
+
+Al no cumplir con la expresión solicitada, retornó false tal y como se esperaba.
+
+Por último
+
+    void validarRut() {
+
+        boolean s = rut.validarRut("20.365.698-K");
+        boolean rut = true;
+        assertEquals(rut, s);
+    }
+
+Dado que cumplía con la expresión, retornó true.
+
+    void validarVerificador() {
+
+        boolean s = rut.validarVerificador("20365698k");
+        boolean rut = true;
+    }
+
+Al tener el dígito verificador correcto, como se esperaba, retornó true.
+
+Al utilizar pruebas unitarias, pude darme cuenta de las falencias de mi código más rápido
+y me fue mucho más sencillo hacerme cargo de las mismas, al poder evaluar cada parte
+esencial del código por separado */
